@@ -1,3 +1,5 @@
+/* Presets */
+
 const slider_groups = [
     {
         name: "fruit",
@@ -43,19 +45,14 @@ const fill_groups = [
     }
 ];
 
+/* Query selectors */
+
 for (const group of slider_groups) {
     group.slider = document.querySelector(`.js-${group.name}-slider`);
     group.count = document.querySelector(`.js-${group.name}-count`);
     group.cho = document.querySelector(`.js-${group.name}-cho`);
     group.pro = document.querySelector(`.js-${group.name}-pro`);
     group.fat = document.querySelector(`.js-${group.name}-fat`);
-
-    group.slider.addEventListener("input", ({target: slider}) => {
-        group.count.value = slider.value;
-        group.cho.value = `${group.exchange_cho * slider.value} g`;
-        group.pro.value = `${group.exchange_pro * slider.value} g`;
-        group.fat.value = `${group.exchange_fat * slider.value} g`;
-    });
 }
 
 for (const group of fill_groups) {
@@ -70,6 +67,17 @@ const table = document.querySelector(".js-table");
 const calculated_cho = document.querySelector(".js-calculated-cho");
 const calculated_pro = document.querySelector(".js-calculated-pro");
 const calculated_fat = document.querySelector(".js-calculated-fat");
+
+/* Events */
+
+for (const group of slider_groups) {
+    group.slider.addEventListener("input", ({target: slider}) => {
+        group.count.value = slider.value;
+        group.cho.value = `${group.exchange_cho * slider.value} g`;
+        group.pro.value = `${group.exchange_pro * slider.value} g`;
+        group.fat.value = `${group.exchange_fat * slider.value} g`;
+    });
+}
 
 table.addEventListener("input", () => {
     for (let i = 0; i < fill_groups.length; ++i) {
