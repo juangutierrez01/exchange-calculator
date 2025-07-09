@@ -3,61 +3,43 @@
 <link rel="icon" href="favicon.ico">
 <link rel="stylesheet" href="style.css">
 <script defer src="main.js"></script>
-<table class="js-table">
+
+<table class="js-table table">
     <tr>
         <td>
         <td>
         <td>
-        <td> <label>CHO <input class="js-goal-cho" type="number" value="202"> g</label>
-        <td> <label>PRO <input class="js-goal-pro" type="number" value="91"> g</label>
-        <td> <label>FAT <input class="js-goal-fat" type="number" value="70"> g</label>
-    <tr>
-        <td> <input id="html-fruit-slider" class="js-fruit-slider" type="range" value="0" max="9">
-        <td> <label for="html-fruit-slider"><output class="js-fruit-count">0</output></label>
-        <td> <label for="html-fruit-slider">FRUIT</label>
-        <td> <output class="js-fruit-cho">0 g</output>
-        <td> <output class="js-fruit-pro">0 g</output>
-        <td> <output class="js-fruit-fat">0 g</output>
-    <tr>
-        <td> <input id="html-veg-slider" class="js-veg-slider" type="range" value="0" max="9">
-        <td> <label for="html-veg-slider"><output class="js-veg-count">0</output></label>
-        <td> <label for="html-veg-slider">VEG</label>
-        <td> <output class="js-veg-cho">0 g</output>
-        <td> <output class="js-veg-pro">0 g</output>
-        <td> <output class="js-veg-fat">0 g</output>
-    <tr>
-        <td> <input id="html-milk-slider" class="js-milk-slider" type="range" value="0" max="9">
-        <td> <label for="html-milk-slider"><output class="js-milk-count">0</output></label>
-        <td> <label for="html-milk-slider">MILK</label>
-        <td> <output class="js-milk-cho">0 g</output>
-        <td> <output class="js-milk-pro">0 g</output>
-        <td> <output class="js-milk-fat">0 g</output>
-    <tr>
-        <td>
-        <td> <output class="js-starch-count">0</output>
-        <td> STARCH
-        <td> <output class="js-starch-cho">0 g</output>
-        <td> <output class="js-starch-pro">0 g</output>
-        <td> <output class="js-starch-fat">0 g</output>
-    <tr>
-        <td>
-        <td> <output class="js-pro-count">0</output>
-        <td> PRO
-        <td> <output class="js-pro-cho">0 g</output>
-        <td> <output class="js-pro-pro">0 g</output>
-        <td> <output class="js-pro-fat">0 g</output>
-    <tr>
-        <td>
-        <td> <output class="js-fat-count">0</output>
-        <td> FAT
-        <td> <output class="js-fat-cho">0 g</output>
-        <td> <output class="js-fat-pro">0 g</output>
-        <td> <output class="js-fat-fat">0 g</output>
-    <tr>
+        <td colspan="2"> <label>CHO <input class="js-goal-cho table__goal-input" type="number" value="202"> g</label>
+        <td colspan="2"> <label>PRO <input class="js-goal-pro table__goal-input" type="number" value="91"> g</label>
+        <td colspan="2"> <label>FAT <input class="js-goal-fat table__goal-input" type="number" value="70"> g</label>
+    <tr class="js-last-row">
         <td>
         <td>
         <td>
-        <td> CHO: <output class="js-calculated-cho">0 g</output>
-        <td> PRO: <output class="js-calculated-pro">0 g</output>
-        <td> FAT: <output class="js-calculated-fat">0 g</output>
+        <td colspan="2"> CHO: <output class="js-calculated-cho">0 g</output>
+        <td colspan="2"> PRO: <output class="js-calculated-pro">0 g</output>
+        <td colspan="2"> FAT: <output class="js-calculated-fat">0 g</output>
 </table>
+
+<template class="js-slider-group-template">
+    <tr>
+        <td> <input class="js-slider table__servings-slider" type="range" value="0" max="9">
+        <td> <label class="js-servings-label"><output class="js-servings">0</output></label>
+        <td> <label class="js-name-label"></label>
+        <td class="js-cho-cell" colspan="2"> <output class="js-cho">0 g</output>
+        <td class="js-cho-rate-cell table__rate-cell" hidden="hidden"> (<input class="js-cho-rate table__rate-input" type="number" value="0"><label class="table__rate-label">g per <br> serving</label>)
+        <td class="js-pro-cell" colspan="2"> <output class="js-pro">0 g</output>
+        <td class="js-pro-rate-cell table__rate-cell" hidden="hidden"> (<input class="js-pro-rate table__rate-input" type="number" value="0"><span class="table__rate-label">g per <br> serving</span>)
+        <td class="js-fat-cell" colspan="2"> <output class="js-fat">0 g</output>
+        <td class="js-fat-rate-cell table__rate-cell" hidden="hidden"> (<input class="js-fat-rate table__rate-input" type="number" value="0"><span class="table__rate-label">g per <br> serving</span>)
+</template>
+
+<template class="js-fill-group-template">
+    <tr>
+        <td>
+        <td> <output class="js-servings">0</output>
+        <td class="js-name-cell">
+        <td colspan="2"> <output class="js-cho">0 g</output>
+        <td colspan="2"> <output class="js-pro">0 g</output>
+        <td colspan="2"> <output class="js-fat">0 g</output>
+</template>

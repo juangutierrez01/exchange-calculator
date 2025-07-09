@@ -2,19 +2,34 @@ html {
   color-scheme: light dark;
 }
 
-input[type=number] {
-  width: 3rem;
-}
-
-input[type=range] {
-  width: 100px;
-}
-
-table {
+.table {
   border-collapse: collapse;
 }
 
-td {
+.table td {
   border-style: solid;
   padding: 8px;
+}
+
+.table__goal-input {
+  width: 4rem;
+}
+
+.table__servings-slider {
+  width: 100px;
+}
+
+td.table__rate-cell {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.table__rate-input {
+  width: 2rem;
+}
+
+.table__rate-label {
+  font-size: 0.7rem;
+  display: inline-block;
+  vertical-align: bottom;
 }
