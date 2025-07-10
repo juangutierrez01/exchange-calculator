@@ -39,16 +39,8 @@ const table = document.querySelector(".js-table");
 const slider_group_template = document.querySelector(".js-slider-group-template");
 const fill_group_template = document.querySelector(".js-fill-group-template");
 const last_row = document.querySelector(".js-last-row");
-const goal_nutrients = [
-    document.querySelector(".js-goal-cho"),
-    document.querySelector(".js-goal-pro"),
-    document.querySelector(".js-goal-fat")
-];
-const calculated_nutrients = [
-    document.querySelector(".js-calculated-cho"),
-    document.querySelector(".js-calculated-pro"),
-    document.querySelector(".js-calculated-fat")
-];
+const goal_nutrients = Array.from(document.querySelectorAll(".js-goal-nutrient"));
+const calculated_nutrients = Array.from(document.querySelectorAll(".js-calculated-nutrient"));
 
 /* Slider Groups */
 
@@ -61,26 +53,10 @@ for (const group of slider_groups) {
     const servings = new_row.querySelector(".js-servings");
     const servings_label = new_row.querySelector(".js-servings-label");
     const name_label = new_row.querySelector(".js-name-label");
-    const nutrients = [
-        new_row.querySelector(".js-cho"),
-        new_row.querySelector(".js-pro"),
-        new_row.querySelector(".js-fat")
-    ];
-    const rates = [
-        new_row.querySelector(".js-cho-rate"),
-        new_row.querySelector(".js-pro-rate"),
-        new_row.querySelector(".js-fat-rate")
-    ];
-    const nutrient_cells = [
-        new_row.querySelector(".js-cho-cell"),
-        new_row.querySelector(".js-pro-cell"),
-        new_row.querySelector(".js-fat-cell")
-    ];
-    const rate_cells = [
-        new_row.querySelector(".js-cho-rate-cell"),
-        new_row.querySelector(".js-pro-rate-cell"),
-        new_row.querySelector(".js-fat-rate-cell")
-    ];
+    const nutrients = Array.from(new_row.querySelectorAll(".js-nutrient"));
+    const nutrient_cells = Array.from(new_row.querySelectorAll(".js-nutrient-cell"));
+    const rates = Array.from(new_row.querySelectorAll(".js-rate"));
+    const rate_cells = Array.from(new_row.querySelectorAll(".js-rate-cell"));
 
     // Set 'id' and 'for' attributes for inputs and labels
     slider.setAttribute("id", `html-${group.name}-slider`);
@@ -171,26 +147,10 @@ for (const group of fill_groups) {
     // Query-select elements
     const servings = new_row.querySelector(".js-servings");
     const name_cell = new_row.querySelector(".js-name-cell");
-    const nutrients = [
-        new_row.querySelector(".js-cho"),
-        new_row.querySelector(".js-pro"),
-        new_row.querySelector(".js-fat")
-    ];
-    const rates = [
-        new_row.querySelector(".js-cho-rate"),
-        new_row.querySelector(".js-pro-rate"),
-        new_row.querySelector(".js-fat-rate")
-    ];
-    const nutrient_cells = [
-        new_row.querySelector(".js-cho-cell"),
-        new_row.querySelector(".js-pro-cell"),
-        new_row.querySelector(".js-fat-cell")
-    ];
-    const rate_cells = [
-        new_row.querySelector(".js-cho-rate-cell"),
-        new_row.querySelector(".js-pro-rate-cell"),
-        new_row.querySelector(".js-fat-rate-cell")
-    ];
+    const nutrients = Array.from(new_row.querySelectorAll(".js-nutrient"));
+    const nutrient_cells = Array.from(new_row.querySelectorAll(".js-nutrient-cell"));
+    const rates = Array.from(new_row.querySelectorAll(".js-rate"));
+    const rate_cells = Array.from(new_row.querySelectorAll(".js-rate-cell"));
 
     // Set nutrient name and exchange rates
     name_cell.innerText = group.name.toUpperCase();
