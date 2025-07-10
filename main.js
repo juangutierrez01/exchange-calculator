@@ -33,6 +33,12 @@ const fill_groups = [
     }
 ];
 
+const nutrient_abbreviations = [
+    "cho",
+    "pro",
+    "fat"
+]
+
 /* Query Selectors */
 
 const table = document.querySelector(".js-table");
@@ -57,11 +63,16 @@ for (const group of slider_groups) {
     const nutrient_cells = Array.from(new_row.querySelectorAll(".js-nutrient-cell"));
     const rates = Array.from(new_row.querySelectorAll(".js-rate"));
     const rate_cells = Array.from(new_row.querySelectorAll(".js-rate-cell"));
+    const rate_labels = Array.from(new_row.querySelectorAll(".js-rate-label"));
 
     // Set 'id' and 'for' attributes for inputs and labels
     slider.setAttribute("id", `html-${group.name}-slider`);
     servings_label.setAttribute("for", `html-${group.name}-slider`);
     name_label.setAttribute("for", `html-${group.name}-slider`);
+    for (let i = 0; i < rates.length; ++i) {
+        rates[i].setAttribute("id", `html-${group.name}-${nutrient_abbreviations[i]}-rate`);
+        rate_labels[i].setAttribute("for", `html-${group.name}-${nutrient_abbreviations[i]}-rate`);
+    }
 
     // Set nutrient name and exchange rates
     name_label.innerText = group.name.toUpperCase();
@@ -151,6 +162,13 @@ for (const group of fill_groups) {
     const nutrient_cells = Array.from(new_row.querySelectorAll(".js-nutrient-cell"));
     const rates = Array.from(new_row.querySelectorAll(".js-rate"));
     const rate_cells = Array.from(new_row.querySelectorAll(".js-rate-cell"));
+    const rate_labels = Array.from(new_row.querySelectorAll(".js-rate-label"));
+
+    // Set 'id' and 'for' attributes for inputs and labels
+    for (let i = 0; i < rates.length; ++i) {
+        rates[i].setAttribute("id", `html-${group.name}-${nutrient_abbreviations[i]}-rate`);
+        rate_labels[i].setAttribute("for", `html-${group.name}-${nutrient_abbreviations[i]}-rate`);
+    }
 
     // Set nutrient name and exchange rates
     name_cell.innerText = group.name.toUpperCase();
