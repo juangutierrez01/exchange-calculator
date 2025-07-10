@@ -8,20 +8,33 @@ html {
 
 .table td {
   border-style: solid;
-  padding: 8px;
+  padding: 4px;
 }
 
 .table__goal-input {
-  width: 4rem;
+  width: 2.5rem;
 }
 
 .table__servings-slider {
   width: 100px;
 }
 
+.table__nutrient {
+  white-space: nowrap;
+}
+
+td.table__nutrient-cell {
+  border-right-style: none;
+}
+
+
 td.table__rate-cell {
-  padding-top: 4px;
-  padding-bottom: 4px;
+  border-left-style: none;
+  opacity: 0;
+}
+
+td.table__rate-cell:focus-within {
+  opacity: 1;
 }
 
 .table__rate-input {
