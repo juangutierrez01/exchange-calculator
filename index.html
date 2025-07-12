@@ -6,43 +6,43 @@
 
 <table class="js-table table">
     <tr>
-        <td>
-        <td class="table__servings-header">
-        <td>
-        <td colspan="2"> <label>CHO <span class="table__nutrient"><input class="js-goal-nutrient table__goal-input" name="goal_cho" type="number" value="202"> g</label></span>
-        <td colspan="2"> <label>PRO <span class="table__nutrient"><input class="js-goal-nutrient table__goal-input" name="goal_pro" type="number" value="91"> g</label></span>
-        <td colspan="2"> <label>FAT <span class="table__nutrient"><input class="js-goal-nutrient table__goal-input" name="goal_fat" type="number" value="70"> g</label></span>
+        <td class="table__cell">
+        <td class="table__cell table__cell--servings-header">
+        <td class="table__cell">
+        <td class="table__cell" colspan="2"> <label>CHO <span class="table__nutrient"><input class="js-goal-nutrient table__goal-input" name="goal_cho" type="number" value="202"> g</label></span>
+        <td class="table__cell" colspan="2"> <label>PRO <span class="table__nutrient"><input class="js-goal-nutrient table__goal-input" name="goal_pro" type="number" value="91"> g</label></span>
+        <td class="table__cell" colspan="2"> <label>FAT <span class="table__nutrient"><input class="js-goal-nutrient table__goal-input" name="goal_fat" type="number" value="70"> g</label></span>
     <tr class="js-last-row">
-        <td>
-        <td>
-        <td>
-        <td colspan="2"> CHO: <output class="js-calculated-nutrient table__nutrient">0 g</output>
-        <td colspan="2"> PRO: <output class="js-calculated-nutrient table__nutrient">0 g</output>
-        <td colspan="2"> FAT: <output class="js-calculated-nutrient table__nutrient">0 g</output>
+        <td class="table__cell">
+        <td class="table__cell">
+        <td class="table__cell">
+        <td class="table__cell" colspan="2"> CHO: <output class="js-calculated-nutrient table__nutrient">0 g</output>
+        <td class="table__cell" colspan="2"> PRO: <output class="js-calculated-nutrient table__nutrient">0 g</output>
+        <td class="table__cell" colspan="2"> FAT: <output class="js-calculated-nutrient table__nutrient">0 g</output>
 </table>
 
 <template class="js-slider-group-template">
     <tr>
-        <td> <input class="js-slider table__servings-slider" type="range" value="0" max="9">
-        <td> <label class="js-servings-label"><output class="js-servings">0</output></label>
-        <td> <label class="js-name-label"></label>
-        <td class="js-nutrient-cell table__nutrient-cell"> <output class="js-nutrient table__nutrient">0 g</output>
-        <td class="js-rate-cell table__rate-cell"> (<input class="js-rate table__rate-input" type="number" value="0" tabindex="0"><label class="js-rate-label table__rate-label">g per <br> serving</label>)
-        <td class="js-nutrient-cell table__nutrient-cell"> <output class="js-nutrient table__nutrient">0 g</output>
-        <td class="js-rate-cell table__rate-cell"> (<input class="js-rate table__rate-input" type="number" value="0" tabindex="0"><label class="js-rate-label table__rate-label">g per <br> serving</label>)
-        <td class="js-nutrient-cell table__nutrient-cell"> <output class="js-nutrient table__nutrient">0 g</output>
-        <td class="js-rate-cell table__rate-cell"> (<input class="js-rate table__rate-input" type="number" value="0" tabindex="0"><label class="js-rate-label table__rate-label">g per <br> serving</label>)
+        <td class="table__cell"> <input class="js-slider table__servings-slider" type="range" value="0" max="9">
+        <td class="table__cell"> <label class="js-servings-label"><output class="js-servings">0</output></label>
+        <td class="table__cell"> <label class="js-name js-name-label"></label>
+        <td class="js-nutrient-cell table__cell table__cell--nutrient"> <output class="js-nutrient table__nutrient">0 g</output>
+        <td class="js-rate-cell table__cell table__cell--rate"> (<input class="js-rate table__rate-input" type="number" value="0" tabindex="0"><label class="js-rate-label table__rate-label">g per <br> serving</label>)
+        <td class="js-nutrient-cell table__cell table__cell--nutrient"> <output class="js-nutrient table__nutrient">0 g</output>
+        <td class="js-rate-cell table__cell table__cell--rate"> (<input class="js-rate table__rate-input" type="number" value="0" tabindex="0"><label class="js-rate-label table__rate-label">g per <br> serving</label>)
+        <td class="js-nutrient-cell table__cell table__cell--nutrient"> <output class="js-nutrient table__nutrient">0 g</output>
+        <td class="js-rate-cell table__cell table__cell--rate"> (<input class="js-rate table__rate-input" type="number" value="0" tabindex="0"><label class="js-rate-label table__rate-label">g per <br> serving</label>)
 </template>
 
 <template class="js-fill-group-template">
     <tr>
-        <td>
-        <td> <output class="js-servings">0</output>
-        <td class="js-name-cell">
-        <td class="js-nutrient-cell table__nutrient-cell"> <output class="js-nutrient table__nutrient">0 g</output>
-        <td class="js-rate-cell table__rate-cell"> (<input class="js-rate table__rate-input" type="number" value="0" tabindex="0"><label class="js-rate-label table__rate-label">g per <br> serving</label>)
-        <td class="js-nutrient-cell table__nutrient-cell"> <output class="js-nutrient table__nutrient">0 g</output>
-        <td class="js-rate-cell table__rate-cell"> (<input class="js-rate table__rate-input" type="number" value="0" tabindex="0"><label class="js-rate-label table__rate-label">g per <br> serving</label>)
-        <td class="js-nutrient-cell table__nutrient-cell"> <output class="js-nutrient table__nutrient">0 g</output>
-        <td class="js-rate-cell table__rate-cell"> (<input class="js-rate table__rate-input" type="number" value="0" tabindex="0"><label class="js-rate-label table__rate-label">g per <br> serving</label>)
+        <td class="table__cell">
+        <td class="table__cell"> <output class="js-servings">0</output>
+        <td class="table__cell "> <span class="js-name"></span>
+        <td class="js-nutrient-cell table__cell table__cell--nutrient"> <output class="js-nutrient table__nutrient">0 g</output>
+        <td class="js-rate-cell table__cell table__cell--rate"> (<input class="js-rate table__rate-input" type="number" value="0" tabindex="0"><label class="js-rate-label table__rate-label">g per <br> serving</label>)
+        <td class="js-nutrient-cell table__cell table__cell--nutrient"> <output class="js-nutrient table__nutrient">0 g</output>
+        <td class="js-rate-cell table__cell table__cell--rate"> (<input class="js-rate table__rate-input" type="number" value="0" tabindex="0"><label class="js-rate-label table__rate-label">g per <br> serving</label>)
+        <td class="js-nutrient-cell table__cell table__cell--nutrient"> <output class="js-nutrient table__nutrient">0 g</output>
+        <td class="js-rate-cell table__cell table__cell--rate"> (<input class="js-rate table__rate-input" type="number" value="0" tabindex="0"><label class="js-rate-label table__rate-label">g per <br> serving</label>)
 </template>

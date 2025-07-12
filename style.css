@@ -9,13 +9,27 @@ html {
   border-collapse: collapse;
 }
 
-.table__servings-header {
+.table__cell {
+  border-style: solid;
+  padding: 4px;
+}
+
+.table__cell--servings-header {
   width: 2ch;
 }
 
-.table td {
-  border-style: solid;
-  padding: 4px;
+.table__cell--nutrient {
+  width: 5ch;
+  border-right-style: none;
+}
+
+.table__cell--rate {
+  border-left-style: none;
+  opacity: 0;
+}
+
+.table__cell--rate:focus-within {
+  opacity: 1;
 }
 
 .table__goal-input {
@@ -28,21 +42,6 @@ html {
 
 .table__nutrient {
   white-space: nowrap;
-}
-
-td.table__nutrient-cell {
-  width: 5ch;
-  border-right-style: none;
-}
-
-
-td.table__rate-cell {
-  border-left-style: none;
-  opacity: 0;
-}
-
-td.table__rate-cell:focus-within {
-  opacity: 1;
 }
 
 .table__rate-input {

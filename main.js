@@ -58,6 +58,7 @@ for (const group of slider_groups) {
     const slider = new_row.querySelector(".js-slider");
     const servings = new_row.querySelector(".js-servings");
     const servings_label = new_row.querySelector(".js-servings-label");
+    const name = new_row.querySelector(".js-name");
     const name_label = new_row.querySelector(".js-name-label");
     const nutrients = Array.from(new_row.querySelectorAll(".js-nutrient"));
     const nutrient_cells = Array.from(new_row.querySelectorAll(".js-nutrient-cell"));
@@ -75,7 +76,7 @@ for (const group of slider_groups) {
     }
 
     // Set nutrient name and exchange rates
-    name_label.innerText = group.name.toUpperCase();
+    name.innerText = group.name.toUpperCase();
     for (let i = 0; i < rates.length; ++i) {
         rates[i].value = group.rates[i];
     }
@@ -157,7 +158,7 @@ for (const group of fill_groups) {
 
     // Query-select elements
     const servings = new_row.querySelector(".js-servings");
-    const name_cell = new_row.querySelector(".js-name-cell");
+    const name = new_row.querySelector(".js-name");
     const nutrients = Array.from(new_row.querySelectorAll(".js-nutrient"));
     const nutrient_cells = Array.from(new_row.querySelectorAll(".js-nutrient-cell"));
     const rates = Array.from(new_row.querySelectorAll(".js-rate"));
@@ -171,7 +172,7 @@ for (const group of fill_groups) {
     }
 
     // Set nutrient name and exchange rates
-    name_cell.innerText = group.name.toUpperCase();
+    name.innerText = group.name.toUpperCase();
     for (let i = 0; i < rates.length; ++i) {
         rates[i].value = group.rates[i];
     }
