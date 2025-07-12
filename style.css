@@ -83,5 +83,6 @@ html {
 .table__rate-label {
   font-size: 0.7rem;
   display: inline-block;
+  width: min-content;
   vertical-align: bottom;
 }
