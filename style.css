@@ -10,7 +10,6 @@ html {
 }
 
 .table__cell {
-  border-style: solid;
   padding: 4px;
 }
 
@@ -18,13 +17,18 @@ html {
   width: 2ch;
 }
 
+.table__cell--nutrient-header {
+  border-bottom-style: solid;
+  border-collapse: collapse;
+}
+
 .table__cell--nutrient {
+  border-bottom-style: dotted;
   width: 5ch;
-  border-right-style: none;
 }
 
 .table__cell--rate {
-  border-left-style: none;
+  border-bottom-style: dotted;
   opacity: 0;
 }
 
