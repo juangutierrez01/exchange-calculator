@@ -40,6 +40,34 @@ html {
   width: 100px;
 }
 
+.table__name {
+  background-color: color-mix(in srgb, silver 50%, transparent);
+}
+
+.table__name--fruit {
+  background-color: hsl(330 80% 80% / 50%);
+}
+
+.table__name--veg {
+  background-color: hsl(99 50% 80% / 50%);
+}
+
+.table__name--milk {
+  background-color: hsl(212 100% 70% / 50%);
+}
+
+.table__name--starch {
+  background-color: hsl(33 100% 70% / 50%);
+}
+
+.table__name--pro {
+  background-color: hsl(0 100% 80% / 50%);
+}
+
+.table__name--fat {
+  background-color: hsl(47 100% 75% / 50%);
+}
+
 .table__nutrient {
   white-space: nowrap;
 }

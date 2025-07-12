@@ -74,9 +74,10 @@ for (const group of slider_groups) {
         rates[i].setAttribute("id", `html-${group.name}-${nutrient_abbreviations[i]}-rate`);
         rate_labels[i].setAttribute("for", `html-${group.name}-${nutrient_abbreviations[i]}-rate`);
     }
-
+    
     // Set nutrient name and exchange rates
     name.innerText = group.name.toUpperCase();
+    name.classList.add(`table__name--${group.name}`);
     for (let i = 0; i < rates.length; ++i) {
         rates[i].value = group.rates[i];
     }
@@ -173,6 +174,7 @@ for (const group of fill_groups) {
 
     // Set nutrient name and exchange rates
     name.innerText = group.name.toUpperCase();
+    name.classList.add(`table__name--${group.name}`);
     for (let i = 0; i < rates.length; ++i) {
         rates[i].value = group.rates[i];
     }
